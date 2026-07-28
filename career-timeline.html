@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Timeline · Jamila</title>
+
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="career-timeline">
+
+  <div id="nav-mount" data-active="career-timeline"></div>
+
+  <main class="main main-climb">
+    <a href="index.html" class="back-link">← Back to home</a>
+
+    <header class="page-header" style="border-bottom:none; padding-bottom:0; margin-bottom:18px;">
+      <div class="page-eyebrow">02 · Career Timeline</div>
+      <h1 class="page-title">The Climb</h1>
+    </header>
+
+    <section class="climb" aria-label="Career timeline mountain range">
+
+      <!-- The landscape -->
+      <svg class="climb-range" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="1" stop-color="#eef5fc"/>
+          </linearGradient>
+          <linearGradient id="mtnFront" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#9aa4ad"/>
+            <stop offset="1" stop-color="#6f7982"/>
+          </linearGradient>
+          <filter id="trailGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#3ea0ff" flood-opacity="0.9"/>
+          </filter>
+        </defs>
+
+        <rect x="0" y="0" width="1200" height="560" fill="url(#sky)"/>
+
+        <!-- clouds (kept low, in the valleys, clear of all logos) -->
+        <g fill="#d9e5f1">
+          <path transform="translate(250,108) scale(1.10)" d="M10,40 C4,40 0,35 0,30 C0,24 5,20 11,20 C12,11 20,5 29,6 C33,-1 45,-2 51,4 C58,-1 69,1 71,9 C80,8 88,14 88,22 C96,22 100,27 100,32 C100,37 96,40 90,40 Z"/>
+          <path transform="translate(548,98) scale(1.15)"  d="M10,40 C4,40 0,35 0,30 C0,24 5,20 11,20 C12,11 20,5 29,6 C33,-1 45,-2 51,4 C58,-1 69,1 71,9 C80,8 88,14 88,22 C96,22 100,27 100,32 C100,37 96,40 90,40 Z"/>
+          <path transform="translate(72,142) scale(0.82)"  d="M10,40 C4,40 0,35 0,30 C0,24 5,20 11,20 C12,11 20,5 29,6 C33,-1 45,-2 51,4 C58,-1 69,1 71,9 C80,8 88,14 88,22 C96,22 100,27 100,32 C100,37 96,40 90,40 Z"/>
+        </g>
+
+        <!-- birds (high, in gaps between logos) -->
+        <g fill="none" stroke="#5a6a79" stroke-width="2.5" stroke-linecap="round">
+          <path d="M205,150 q9,-9 18,0 q9,-9 18,0"/>
+          <path d="M500,148 q7,-7 14,0 q7,-7 14,0"/>
+          <path d="M885,108 q9,-9 18,0 q9,-9 18,0"/>
+        </g>
+
+        <!-- back range -->
+        <path d="M0,470 L0,430 L130,360 L280,452 L400,340 L560,442 L710,318 L865,432 L1005,290 L1160,405 L1200,378 L1200,470 Z"
+              fill="#b7c0c9" opacity="0.75"/>
+
+        <!-- front range -->
+        <path d="M0,470 L0,398 L170,305 L300,430 L450,258 L600,415 L760,208 L905,405 L1030,135 L1200,332 L1200,470 Z"
+              fill="url(#mtnFront)"/>
+        <!-- right-face shadows for two-tone dimension -->
+        <g fill="#5c656e" opacity="0.35">
+          <path d="M170,305 L300,430 L170,470 Z"/>
+          <path d="M450,258 L600,415 L450,470 Z"/>
+          <path d="M760,208 L905,405 L760,470 Z"/>
+          <path d="M1030,135 L1200,332 L1030,470 Z"/>
+        </g>
+
+        <!-- snow caps (larger, conform to each peak) -->
+        <g>
+          <path d="M170,305 L42,375 L88,367 L138,379 L190,367 L243,375 Z" fill="#8ccae6"/>
+          <path d="M170,305 L42,375 L128,377 Z" fill="#ffffff" opacity="0.5"/>
+          <path d="M450,258 L393,323 L420,316 L450,327 L482,316 L512,323 Z" fill="#8ccae6"/>
+          <path d="M450,258 L393,323 L448,326 Z" fill="#ffffff" opacity="0.5"/>
+          <path d="M760,208 L712,270 L735,263 L760,273 L786,263 L806,270 Z" fill="#8ccae6"/>
+          <path d="M760,208 L712,270 L757,272 Z" fill="#ffffff" opacity="0.5"/>
+          <path d="M1030,135 L998,205 L1015,198 L1035,208 L1062,198 L1090,205 Z" fill="#8ccae6"/>
+          <path d="M1030,135 L998,205 L1032,207 Z" fill="#ffffff" opacity="0.5"/>
+        </g>
+
+        <!-- rocky ground -->
+        <path d="M0,560 L0,468 L60,462 L130,470 L210,460 L300,470 L400,461 L520,470 L640,461 L780,470 L900,462 L1030,470 L1140,462 L1200,468 L1200,560 Z"
+              fill="#453a29"/>
+        <!-- summit flag, on the peak tip -->
+        <line x1="1030" y1="135" x2="1030" y2="104" stroke="#8a2b2b" stroke-width="2.5"/>
+        <path d="M1030,106 L1056,113 L1030,120 Z" fill="#e23b3b"/>
+
+        <!-- climbing trail: dim base + interactive glow reveal -->
+        <polyline class="trail-base" points="35,380 170,305 300,430 450,258 600,415 760,208 905,405 1030,135"
+                  fill="none" stroke="#ffffff" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" opacity="0.7"/>
+        <polyline class="trail-glow" points="35,380 170,305 300,430 450,258 600,415 760,208 905,405 1030,135"
+                  fill="none" stroke="#1b96ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#trailGlow)"/>
+
+        <!-- trail nodes -->
+        <g class="climb-nodes">
+          <circle class="climb-node" data-x="170" cx="170" cy="305" r="5"/>
+          <circle class="climb-node" data-x="450" cx="450" cy="258" r="5"/>
+          <circle class="climb-node" data-x="760" cx="760" cy="208" r="5"/>
+          <circle class="climb-node" data-x="1030" cx="1030" cy="135" r="5"/>
+        </g>
+      </svg>
+
+      <!-- MBA overhead sun — right side (started recently, back at Salesforce) -->
+      <div class="climb-school">
+        <div class="climb-sun">🎓</div>
+        <div class="climb-school-label">
+          <strong>Georgia Tech</strong>
+          <span>Scheller MBA</span>
+          <span>in parallel</span>
+        </div>
+      </div>
+
+      <!-- Logos floating above each peak (no pole) -->
+      <img class="climb-logo" src="logo-salesforce.png" alt="Salesforce" style="left:14.2%; top:41%;   width:8%;">
+      <img class="climb-logo" src="logo-collibra.png"  alt="Collibra"   style="left:37.5%; top:32.5%; width:12%;">
+      <img class="climb-logo" src="logo-clari.png"      alt="Clari"      style="left:63.3%; top:23.5%; width:10.5%;">
+      <img class="climb-logo" src="logo-salesforce.png" alt="Salesforce" style="left:85.8%; top:11%;   width:7.5%;">
+
+      <!-- Peak hover targets — role appears on hover -->
+      <div class="climb-peak" style="left:14.2%; top:54.5%;"><span class="climb-role">SE Success Graduate<em>Scout Academy</em></span></div>
+      <div class="climb-peak" style="left:37.5%; top:46.1%;"><span class="climb-role">Lead Sales Engineer</span></div>
+      <div class="climb-peak" style="left:63.3%; top:37.1%;"><span class="climb-role">Senior SE, Enterprise</span></div>
+      <div class="climb-peak" style="left:85.8%; top:24.1%;"><span class="climb-role">Senior SE, Core</span></div>
+
+    </section>
+
+    <!-- Mobile-friendly stacked version (shown under 768px) -->
+    <ul class="climb-list" aria-label="Career timeline (list)">
+      <li class="is-school">
+        <span class="climb-list-badge">🎓</span>
+        <div><strong>Georgia Tech · Scheller MBA</strong><span>pursuing in parallel</span></div>
+      </li>
+      <li>
+        <span class="climb-list-badge"><img src="logo-salesforce.png" alt="Salesforce"></span>
+        <div><strong>SE Success Graduate</strong><span>Scout Academy</span></div>
+      </li>
+      <li>
+        <span class="climb-list-badge"><img src="logo-collibra.png" alt="Collibra"></span>
+        <div><strong>Lead Sales Engineer</strong></div>
+      </li>
+      <li>
+        <span class="climb-list-badge"><img src="logo-clari.png" alt="Clari"></span>
+        <div><strong>Senior SE, Enterprise</strong></div>
+      </li>
+      <li class="is-summit">
+        <span class="climb-list-badge"><img src="logo-salesforce.png" alt="Salesforce"></span>
+        <div><strong>Senior SE, Core</strong><span>you are here</span></div>
+      </li>
+    </ul>
+
+    <footer class="page-footer"><span>© Jamila · 2026</span></footer>
+  </main>
+
+  <script src="nav.js"></script>
+
+  <!-- Interactive trail: reveal the climb as the mouse moves across the range -->
+  <script>
+    (function () {
+      const climb = document.querySelector('.climb');
+      if (!climb) return;
+      const glow  = climb.querySelector('.trail-glow');
+      const nodes = [...climb.querySelectorAll('.climb-node')];
+      const pts = [[35,380],[170,305],[300,430],[450,258],[600,415],[760,208],[905,405],[1030,135]];
+
+      const cum = [0];
+      let total = 0;
+      for (let i = 1; i < pts.length; i++) {
+        total += Math.hypot(pts[i][0]-pts[i-1][0], pts[i][1]-pts[i-1][1]);
+        cum.push(total);
+      }
+      glow.style.strokeDasharray = total;
+      glow.style.strokeDashoffset = total;
+
+      function lenAtX(x) {
+        if (x <= pts[0][0]) return 0;
+        if (x >= pts[pts.length-1][0]) return total;
+        for (let i = 1; i < pts.length; i++) {
+          if (x <= pts[i][0]) {
+            const f = (x - pts[i-1][0]) / (pts[i][0] - pts[i-1][0]);
+            return cum[i-1] + (cum[i] - cum[i-1]) * f;
+          }
+        }
+        return total;
+      }
+
+      function update(clientX) {
+        const r = climb.getBoundingClientRect();
+        const svgX = (clientX - r.left) / r.width * 1200;
+        glow.style.strokeDashoffset = total - lenAtX(svgX);
+        nodes.forEach(n => n.classList.toggle('lit', svgX >= (+n.getAttribute('data-x')) - 4));
+      }
+
+      climb.addEventListener('pointermove', e => update(e.clientX));
+      climb.addEventListener('pointerleave', () => {
+        glow.style.strokeDashoffset = total;
+        nodes.forEach(n => n.classList.remove('lit'));
+      });
+    })();
+  </script>
+</body>
+</html>

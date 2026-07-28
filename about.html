@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me · Jamila</title>
+
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="about">
+
+  <div id="nav-mount" data-active="about"></div>
+
+  <main class="main main-about">
+    <a href="index.html" class="back-link">← Back to home</a>
+
+    <header class="page-header" style="border-bottom:none; padding-bottom:0; margin-bottom:20px;">
+      <div class="page-eyebrow">01 · About Me</div>
+      <h1 class="page-title">About Me<span class="sec-emoji" style="animation-delay:0s">👋🏾</span></h1>
+    </header>
+
+    <blockquote class="about-mantra">You can't be what you can't see.<cite>Marian Wright Edelman</cite></blockquote>
+
+    <!-- "Who is Jamila" photo marquee.
+         Drop personal photos into the project named about-1.jpg, about-2.jpg, ... (JPG or PNG).
+         Each tile stays hidden until its file exists; the row auto-scrolls and loops.
+         Add or remove <figure> tiles to match how many photos you end up with. -->
+    <section class="photo-strip-section about-strip">
+      <div class="photo-strip-label">// WHO IS JAMILA</div>
+      <div class="photo-strip">
+        <div class="photo-strip-track" id="about-track"></div>
+      </div>
+    </section>
+
+    <!-- THE SHORT VERSION -->
+    <section class="about-block reveal">
+      <h2 class="about-h2">The short version</h2>
+      <div class="about-meta">
+        <span class="meta-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Atlanta, GA</span>
+        <span class="meta-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 4h4a2 2 0 0 1 2 2v1h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3V6a2 2 0 0 1 2-2zm0 3h4V6h-4z"/></svg>Senior Account Solution Engineer</span>
+      </div>
+      <p class="about-lead2">I am a Solution Engineer, but the work I care about most goes beyond the deal. I like getting things started and seeing them through. I put real energy into the people around me, the newer SEs I mentor and the AEs I go to bat for. When I am not working, I am usually traveling, chasing a good meal, or hosting something that brings Atlanta's tech and creative community together.</p>
+    </section>
+
+    <!-- WHAT I'M KNOWN FOR -->
+    <section class="about-block reveal">
+      <h2 class="about-h2">What I'm known for</h2>
+      <div class="kf-grid">
+        <div class="kf-card"><span class="kf-ico">✅</span><p>Showing up prepared, and following through without being asked</p></div>
+        <div class="kf-card"><span class="kf-ico">🚀</span><p>Getting things started, and making sure they land</p></div>
+        <div class="kf-card"><span class="kf-ico">🌱</span><p>Developing the people around me, new SEs and AE partners alike</p></div>
+        <div class="kf-card"><span class="kf-ico">🎤</span><p>Speaking directly, and with conviction</p></div>
+        <div class="kf-card"><span class="kf-ico">🤝</span><p>Building community, inside Salesforce and beyond it</p></div>
+      </div>
+    </section>
+
+    <!-- HOW I'M WIRED -->
+    <section class="about-block reveal wired">
+      <h2 class="about-h2">How I'm wired</h2>
+      <p class="about-sub-line">CliftonStrengths top five, and how they cluster.</p>
+
+      <div class="strengths">
+        <div class="str dom-doing"><span class="rank">01</span><span class="sname">Deliverer</span><span class="dom">Doing</span><p class="str-desc">I finish what I start and own the follow-through.</p></div>
+        <div class="str dom-motivate"><span class="rank">02</span><span class="sname">Catalyst</span><span class="dom">Motivating</span><p class="str-desc">I get things moving and build the momentum.</p></div>
+        <div class="str dom-feeling"><span class="rank">03</span><span class="sname">Coach</span><span class="dom">Feeling</span><p class="str-desc">I invest in the people around me and help them grow.</p></div>
+        <div class="str dom-motivate"><span class="rank">04</span><span class="sname">Commander</span><span class="dom">Motivating</span><p class="str-desc">I take charge, make the call, and say it straight.</p></div>
+        <div class="str dom-motivate"><span class="rank">05</span><span class="sname">Self-Believer</span><span class="dom">Motivating</span><p class="str-desc">I trust my judgment and back myself under pressure.</p></div>
+      </div>
+
+      <div class="domain-mix">
+        <div class="dm-label">Strength domains</div>
+        <div class="dm-bar">
+          <span class="dm-seg dom-motivate" style="--w:51%"><em>Motivating</em><b>51%</b></span>
+          <span class="dm-seg dom-doing" style="--w:28%"><em>Doing</em><b>28%</b></span>
+          <span class="dm-seg dom-feeling" style="--w:19%"><em>Feeling</em><b>19%</b></span>
+        </div>
+      </div>
+
+      <div class="disc">
+        <div class="disc-head"><span class="disc-type">DiSC · DI</span>Direct, action-oriented, energized by challenge. Builds momentum and moves people to act.</div>
+        <div class="disc-meters">
+          <div class="meter"><span class="m-lbl">Dominance</span><span class="m-track"><i style="--v:40%"></i></span><span class="m-val">40%</span></div>
+          <div class="meter"><span class="m-lbl">Influence</span><span class="m-track"><i style="--v:33%"></i></span><span class="m-val">33%</span></div>
+          <div class="meter"><span class="m-lbl">Steadiness</span><span class="m-track"><i style="--v:17%"></i></span><span class="m-val">17%</span></div>
+          <div class="meter"><span class="m-lbl">Compliance</span><span class="m-track"><i style="--v:10%"></i></span><span class="m-val">10%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTSIDE OF WORK -->
+    <section class="about-block reveal">
+      <h2 class="about-h2">Outside of work</h2>
+      <div class="interests">
+        <span class="chip">✈️ Travel</span>
+        <span class="chip">🍷 Wine &amp; Michelin dining</span>
+        <span class="chip">⛳ Golf, not consistent at all</span>
+        <span class="chip">🎟️ Hosting experiences for Atlanta's tech &amp; creative community</span>
+      </div>
+    </section>
+
+    <!-- TAKE WHAT YOU NEED (tear-off) -->
+    <section class="about-block reveal tearoff-block">
+      <div class="tearoff">
+        <div class="tape" aria-hidden="true"></div>
+        <div class="tearoff-title">Take what you need</div>
+        <!-- Each tab opens Jamila's Slack profile (member ID U01G8M4L9NX). -->
+        <div class="tearoff-tabs">
+          <a class="tab" href="https://salesforce.enterprise.slack.com/team/U01G8M4L9NX" target="_blank" rel="noopener"><span class="tab-t">a demo partner</span></a>
+          <a class="tab" href="https://salesforce.enterprise.slack.com/team/U01G8M4L9NX" target="_blank" rel="noopener"><span class="tab-t">discovery prep</span></a>
+          <a class="tab" href="https://salesforce.enterprise.slack.com/team/U01G8M4L9NX" target="_blank" rel="noopener"><span class="tab-t">a gut-check</span></a>
+          <a class="tab" href="https://salesforce.enterprise.slack.com/team/U01G8M4L9NX" target="_blank" rel="noopener"><span class="tab-t">a warm intro</span></a>
+          <a class="tab" href="https://salesforce.enterprise.slack.com/team/U01G8M4L9NX" target="_blank" rel="noopener"><span class="tab-t">a pep talk</span></a>
+          <a class="tab" href="https://salesforce.enterprise.slack.com/team/U01G8M4L9NX" target="_blank" rel="noopener"><span class="tab-t">a framework</span></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-footer"><span>© Jamila · 2026</span></footer>
+  </main>
+
+  <script src="nav.js"></script>
+  <!-- Build the "Who is Jamila" strip from about-photos/ (portraits interleaved),
+       then double it for a seamless auto-scroll loop. Reorder / trim this list to taste. -->
+  <script>
+    (function () {
+      const PHOTOS = [
+        "IMG_7042.jpeg",                                    // group · GT campus
+        "IMG_0169.jpeg",                                    // dog
+        "0N2A1268.JPG",                                     // couple
+        "IMG_4320.jpeg",                                    // safari · giraffe
+        "IMG_4491.jpg",                                     // solo · Sistas in Sales
+        "87ee476d-6c65-4390-b0d3-da084c4820a8.JPG",         // group · dinner
+        "IMG_2506.jpeg",                                    // dog
+        "IMG_1989.jpeg",                                    // travel · ski / Olympics
+        "D31B81A5-B57B-474D-91CE-996BC1744486.JPG",         // friends
+        "IMG_4260.jpeg",                                    // safari · zebras
+        "IMG_0023.jpg",                                     // group · pilates
+        "IMG_9881.jpeg",                                    // dog
+        "IMG_0851.jpg",                                     // childhood
+        "Facetune_26-03-2026-13-58-17.jpeg",                // group · terrace
+        "IMG_3174.jpeg",                                    // dog
+        "Facetune_27-03-2026-20-32-45.jpeg",                // travel · Akagera
+        "IMG_4239.jpeg",                                    // safari · impala
+        "IMG_3614.jpeg",                                    // group · GT flag
+        "IMG_7844.jpeg",                                    // dog
+        "IMG_1924_Original.jpg",                            // couple · exhibit
+        "064A4186.JPEG",                                    // fitness · boxing
+        "IMG_5030.jpeg",                                    // group
+        "IMG_9949.jpeg",                                    // dog
+        "IMG_5886.jpeg",                                    // travel · ski
+        "IMG_4322.jpeg",                                    // safari · giraffe
+        "family-christmas.jpg",                             // family · holiday
+        "copy_66CEC925-2694-4ED0-BFDB-2817D2AA8F89.JPEG",   // group · Scheller
+        "IMG_6120.jpg",                                     // dog + person
+        "Facetune_08-05-2026-16-24-00.jpeg",                // solo · Niche
+        "93a68809-8ddf-49cb-90a8-fc5b43efa8ee.JPG",         // group · Rwanda
+        "IMG_4349.jpeg",                                    // safari · buffalo
+        "IMG_6141.jpeg",                                    // childhood
+        "IMG_0806.jpeg",                                    // group · dinner
+        "IMG_1753.jpeg",                                    // dog
+        "IMG_2455.JPG",                                     // travel · Cabo
+        "IMG_9856.jpeg",                                    // family
+        "IMG_3727.jpeg"                                     // travel · Kwibuka
+      ];
+      const track = document.getElementById('about-track');
+      if (!track) return;
+      // Double the list so the -50% scroll loops seamlessly.
+      PHOTOS.concat(PHOTOS).forEach(function (name) {
+        const fig = document.createElement('figure');
+        fig.className = 'photo-tile about-slide';
+        const img = document.createElement('img');
+        img.alt = '';
+        img.addEventListener('load', function () { fig.classList.add('ready'); });
+        img.src = 'about-photos/' + name;
+        fig.appendChild(img);
+        track.appendChild(fig);
+      });
+    })();
+  </script>
+  <script>
+    // Reveal About sections on scroll; fill the strength/DiSC bars when "How I'm wired" enters view
+    (function () {
+      if (!('IntersectionObserver' in window)) return;
+      document.documentElement.classList.add('js-about');
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          e.target.classList.add('in');
+          if (e.target.classList.contains('wired')) e.target.classList.add('animate');
+          io.unobserve(e.target);
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: 0.15 });
+      document.querySelectorAll('.about-block.reveal').forEach(s => io.observe(s));
+    })();
+  </script>
+</body>
+</html>

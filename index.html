@@ -16,37 +16,115 @@
   <!-- nav.js will replace this with the top nav bar -->
   <div id="nav-mount" data-active="home"></div>
 
-  <main class="main">
+  <main class="main main-home">
 
-    <section class="hero">
-      <h1 class="hero-name">Lorem Ipsum</h1>
-      <p class="hero-tagline">
-        Dolor sit amet, consectetur adipiscing elit — sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+    <!-- Akash-style sticker stage: drag the callouts around -->
+    <section class="sticker-stage" id="sticker-stage">
+      <span class="sticker-hint">// DRAG AND DROP STICKERS</span>
+
+      <div class="sticker sticker-solid"   style="left:5%;   top:9%;   --rot:-7deg;">💰 DEAL MAKER</div>
+      <div class="sticker sticker-accent"  style="left:74%;  top:12%;  --rot:6deg;">🤖 AI ADVOCATE</div>
+      <div class="sticker sticker-outline" style="left:5%;   top:77%;  --rot:-4deg;">🌐 COMMUNITY BUILDER</div>
+      <div class="sticker sticker-accent"  style="left:36%;  top:84%;  --rot:5deg;">🧭 TRUSTED ADVISOR</div>
+      <div class="sticker sticker-solid"   style="left:63%;  top:75%;  --rot:4deg;">🎼 ORCHESTRATOR</div>
+
+      <!-- Fixed, paper-clipped photo-card. Save your photo as headshot.jpg
+           next to index.html; until then a placeholder frame shows. -->
+      <div class="hero-photo" style="--rot:6deg;" aria-label="Photo of Jamila">
+        <!-- Paper clip with a smiley face built into its head -->
+        <svg class="hero-photo-clip" viewBox="0 0 56 104" width="48" height="88" aria-hidden="true">
+          <path d="M18 40 V80 a10 10 0 0 0 20 0 V48 a6 6 0 0 0-12 0 V72"
+                fill="none" stroke="#c3c8d4" stroke-width="4.5"
+                stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="28" cy="22" r="18" fill="#ffcf33" stroke="#0a1a3f" stroke-width="3"/>
+          <circle cx="21" cy="18" r="2.6" fill="#0a1a3f"/>
+          <circle cx="35" cy="18" r="2.6" fill="#0a1a3f"/>
+          <path d="M20 28 q8 8 16 0" fill="none" stroke="#0a1a3f" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <img src="headshot-web.jpg" alt="Jamila"
+             onerror="this.closest('.hero-photo').classList.add('is-empty');">
+        <span class="hero-photo-ph">📷 YOUR PHOTO</span>
+      </div>
+
+      <div class="hero-quote">"Be thoughtful. Be kind. Be engaged."</div>
+
+      <h1 class="hero-shout">HEY, I'M <span class="hero-shout-name">JAMILA</span></h1>
     </section>
 
-    <section class="card-grid">
-      <a href="page-1.html" class="link-card">
-        <div class="link-card-num">01</div>
-        <div class="link-card-title">Page 1</div>
-        <div class="link-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-      </a>
-
-      <a href="page-2.html" class="link-card">
-        <div class="link-card-num">02</div>
-        <div class="link-card-title">Page 2</div>
-        <div class="link-card-desc">Sed do eiusmod tempor incididunt ut labore et dolore magna.</div>
-      </a>
-
-      <a href="page-3.html" class="link-card">
-        <div class="link-card-num">03</div>
-        <div class="link-card-title">Page 3</div>
-        <div class="link-card-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</div>
-      </a>
+    <!-- Work-events photo carousel (auto-scrolling marquee) -->
+    <section class="photo-strip-section">
+      <div class="photo-strip-label">// IN GOOD COMPANY</div>
+      <div class="photo-strip">
+        <div class="photo-strip-track" id="photo-track">
+          <figure class="photo-tile"><img src="work-1.jpg?v=2" alt="World Tour NYC WISE Brunch 2024"><figcaption>World Tour NYC WISE Brunch · 2024</figcaption></figure>
+          <figure class="photo-tile"><img src="work-2.jpg" alt="BOLDforce MLK Community Service 2026"><figcaption>BOLDforce MLK Community Service · Jan 2026</figcaption></figure>
+          <figure class="photo-tile"><img src="work-3.jpg" alt="BOLDforce MLK Community Service 2026"><figcaption>BOLDforce MLK Community Service · Jan 2026</figcaption></figure>
+          <figure class="photo-tile"><img src="work-4.jpg" alt="Customer Onsite 2026"><figcaption>Customer Onsite · Apr 2026</figcaption></figure>
+          <figure class="photo-tile"><img src="work-5.jpg" alt="Q2 QBR 2026"><figcaption>Q2 QBR · May 2026</figcaption></figure>
+          <figure class="photo-tile"><img src="work-6.jpg" alt="Women in Technology Girls Exploration Day 2026"><figcaption>Girls Exploration Day · Jul 2026</figcaption></figure>
+          <figure class="photo-tile"><img src="work-7.jpg" alt="Women in Technology Girls Exploration Day 2026"><figcaption>Girls Exploration Day · Jul 2026</figcaption></figure>
+          <figure class="photo-tile"><img src="work-8.jpg" alt="Women in Technology Girls Exploration Day 2026"><figcaption>Girls Exploration Day · Jul 2026</figcaption></figure>
+          <figure class="photo-tile"><img src="work-9.jpg" alt="AI Power Hour"><figcaption>AI Power Hour</figcaption></figure>
+          <figure class="photo-tile"><img src="work-10.png" alt="FY27 Partner Summit"><figcaption>FY27 Partner Summit</figcaption></figure>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <script src="nav.js"></script>
+
+  <!-- Duplicate the photo track once for a seamless auto-scroll loop -->
+  <script>
+    (function () {
+      const track = document.getElementById('photo-track');
+      if (track) track.innerHTML += track.innerHTML;
+    })();
+  </script>
+
+  <!-- Homepage-only: make the stickers draggable -->
+  <script>
+    (function () {
+      const stage = document.getElementById('sticker-stage');
+      if (!stage) return;
+
+      let active = null, offsetX = 0, offsetY = 0, z = 10;
+
+      function startDrag(e) {
+        active = e.currentTarget;
+        active.setPointerCapture(e.pointerId);
+        active.classList.add('dragging');
+        active.style.zIndex = ++z;
+        const rect = active.getBoundingClientRect();
+        const point = e.touches ? e.touches[0] : e;
+        offsetX = point.clientX - rect.left;
+        offsetY = point.clientY - rect.top;
+      }
+
+      function moveDrag(e) {
+        if (!active) return;
+        const bounds = stage.getBoundingClientRect();
+        const point = e.touches ? e.touches[0] : e;
+        let x = point.clientX - bounds.left - offsetX;
+        let y = point.clientY - bounds.top  - offsetY;
+        // keep sticker inside the stage
+        x = Math.max(0, Math.min(x, bounds.width  - active.offsetWidth));
+        y = Math.max(0, Math.min(y, bounds.height - active.offsetHeight));
+        active.style.left = x + 'px';
+        active.style.top  = y + 'px';
+      }
+
+      function endDrag() {
+        if (active) active.classList.remove('dragging');
+        active = null;
+      }
+
+      stage.querySelectorAll('.sticker').forEach(s => {
+        s.addEventListener('pointerdown', startDrag);
+      });
+      window.addEventListener('pointermove', moveDrag);
+      window.addEventListener('pointerup', endDrag);
+    })();
+  </script>
 </body>
 </html>
