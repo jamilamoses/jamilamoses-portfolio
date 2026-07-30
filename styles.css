@@ -973,6 +973,21 @@ a { color: inherit; text-decoration: none; }
 
 .case-thesis { font-size: 20px; line-height: 1.55; color: var(--text-secondary); max-width: 62ch; }
 .case-thesis strong { color: var(--text-primary); }
+
+/* Fit pillars — three role-fit anchors under the Case thesis */
+.fit-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; perspective: 900px; }
+.fit-pillar {
+  background: var(--bg-surface); border: 1px solid var(--border); border-radius: 14px;
+  padding: 18px 18px 20px;
+  transition: transform 0.15s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transform-style: preserve-3d; will-change: transform;
+}
+.fit-pillar:hover { border-color: rgba(27,150,255,0.55); box-shadow: 0 16px 34px rgba(0,0,0,0.34); }
+.fit-num { font-family: var(--font-mono); font-size: 12px; letter-spacing: 1px; color: var(--accent); margin-bottom: 10px; }
+.fit-pillar h3 { font-family: var(--font-display); font-size: 16px; font-weight: 700; letter-spacing: -0.01em; color: var(--text-primary); margin-bottom: 8px; }
+.fit-pillar p { font-size: 13.5px; line-height: 1.55; color: var(--text-secondary); }
+@media (max-width: 760px) { .fit-pillars { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .fit-pillar:hover { transform: none; box-shadow: none; } }
 .case-quote {
   margin-top: 26px;
   font-family: var(--font-display); font-weight: 700; font-style: italic;
@@ -1097,13 +1112,13 @@ a { color: inherit; text-decoration: none; }
 .plan-phases { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
 .plan-phase { padding: 22px 20px; border-right: 1px solid var(--border-subtle); }
 .plan-phase:last-child { border-right: 0; }
-.plan-day { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
-.plan-name { font-family: var(--font-display); font-weight: 800; font-size: 20px; line-height: 1.1; color: var(--text-primary); margin-top: 3px; }
+.plan-day { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.plan-name { font-family: var(--font-display); font-weight: 800; font-size: 22px; line-height: 1.1; color: var(--text-primary); margin-top: 3px; }
 .plan-icon { margin: 15px 0 17px; }
 .plan-icon svg { width: 34px; height: 34px; color: var(--accent); display: block; }
-.plan-phase ul { list-style: none; display: grid; gap: 11px; margin: 0; padding: 0; }
-.plan-phase li { font-size: 13px; line-height: 1.5; color: var(--text-secondary); padding-left: 16px; position: relative; }
-.plan-phase li::before { content: ""; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.plan-phase ul { list-style: none; display: grid; gap: 13px; margin: 0; padding: 0; }
+.plan-phase li { font-size: 15px; line-height: 1.55; color: var(--text-secondary); padding-left: 16px; position: relative; }
+.plan-phase li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 
 /* Recognition: masonry wall of shoutout screenshots */
 .main-recognition { max-width: 1080px; }
