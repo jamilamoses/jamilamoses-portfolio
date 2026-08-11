@@ -21,7 +21,7 @@
 
     <header class="page-header" style="border-bottom:none; padding-bottom:0; margin-bottom:8px;">
       <div class="page-eyebrow">04 · The Case</div>
-      <h1 class="page-title">The Case for Lead SE · PE &amp; VC Practice</h1>
+      <h1 class="page-title">The Case for Lead SE</h1>
     </header>
 
     <!-- Sticky section nav -->
@@ -38,25 +38,6 @@
       <h2>The Thesis<span class="sec-emoji" style="animation-delay:0s">🎯</span></h2>
       <p class="case-thesis">For the last several years I have worked at the lead level: <strong>Lead Sales Engineer at Collibra, Senior Enterprise SE at Clari, and now Senior SE at Salesforce</strong>. In each role I carried revenue, built the enablement and programs my teams depend on, and developed the engineers around me. Promotion to Lead SE would not be a move into new territory. It would recognize the scope I already own. <strong>The time is now.</strong></p>
       <!-- ACV: swap a hard figure into the sentence above once org62 numbers land, e.g. "carried $X.XM in ACV across two fiscal years" -->
-
-      <!-- Fit pillars: three role-fit anchors for the PE & VC practice -->
-      <div class="fit-pillars">
-        <div class="fit-pillar">
-          <div class="fit-num">01</div>
-          <h3>The buyers I sell to</h3>
-          <p>Multi-cloud deals sold across the full buying group, from the technical evaluator to the executive who owns the budget.</p>
-        </div>
-        <div class="fit-pillar">
-          <div class="fit-num">02</div>
-          <h3>Technical depth, business language</h3>
-          <p>Credible with engineers on the technical detail, and fluent in the revenue and outcomes leaders care about.</p>
-        </div>
-        <div class="fit-pillar">
-          <div class="fit-num">03</div>
-          <h3>Trusted advisor</h3>
-          <p>Accounts that expand and renew early, built on trust earned over time.</p>
-        </div>
-      </div>
 
       <blockquote class="case-quote">"The function of leadership is to produce more leaders."<cite>— Ralph Nader</cite></blockquote>
     </section>
@@ -213,10 +194,10 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="10" cy="10" r="7"/><path d="M20.7 19.3l-4.5-4.5-1.4 1.4 4.5 4.5a1 1 0 001.4-1.4z"/></svg>
           </div>
           <ul>
-            <li>Build rapport right away, meeting 1:1 with the SEs, RMs, AEs, and practice leaders to learn the current motion and where I can add value fastest</li>
-            <li>Immerse in the practice, how we sell, who we sell to (operating partners, portfolio-company leaders), and where SE involvement moves an investment thesis toward operating results</li>
-            <li>Audit the practice's discovery frameworks and demo assets against today's Agentforce and AI-led motions, and flag what is outdated</li>
-            <li>Get sharp on the AI landscape for this space, what our tools do, and how we differ from the competitors these firms also evaluate</li>
+            <li>Map where SE involvement changes deal outcomes across the pod, using my own pipeline as the baseline, to focus effort where it compounds</li>
+            <li>Meet 1:1 with every AE on the pod to align on pipeline priorities and where SE support moves the number</li>
+            <li>Audit the team's demo assets and discovery frameworks against current Agentforce and AI-led motions, and flag what is outdated</li>
+            <li>Set a standing rhythm with the other SEs to surface shared gaps worth solving once, for everyone</li>
           </ul>
         </div>
         <div class="plan-phase">
@@ -226,10 +207,10 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l10 5-10 5L2 7z"/><path d="M2 12.2l10 5 10-5-2.3-1.15L12 14.7 4.3 11.05z"/><path d="M2 16.9l10 5 10-5-2.3-1.15L12 19.4 4.3 15.75z"/></svg>
           </div>
           <ul>
-            <li>Build at least one reusable asset the whole practice can use, a discovery framework or narrative that scales across the PE firms and portfolio companies we work with</li>
-            <li>Lead a peer enablement session on a product area or value-creation angle I have gotten sharp on</li>
-            <li>Carry 2-3 strategic, multi-cloud deals as lead SE, the kind that set a repeatable pattern for the practice</li>
-            <li>Establish a consistent rhythm with my RMs and AEs and the broader specialist team</li>
+            <li>Ship at least one reusable asset the whole pod can use, extending the AE/SE Resource Hub rather than starting from scratch</li>
+            <li>Lead a peer enablement session on a product or skill gap I identified, in the format that fits the team</li>
+            <li>Carry 2-3 strategic or multi-cloud deals as lead SE, the kind that set a pattern others can follow</li>
+            <li>Run a consistent pipeline and demo-prep cadence with my AEs</li>
           </ul>
         </div>
         <div class="plan-phase">
@@ -239,10 +220,10 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 13h3v7H4zM10.5 8h3v12h-3zM17 3h3v17h-3z"/></svg>
           </div>
           <ul>
-            <li>Have a framework or asset in steady use across the practice, not only me, with a simple measure of adoption</li>
-            <li>Bring leadership a clear point of view on how we differentiate on business value versus our competitors</li>
-            <li>Become a named resource for the practice in a product area or portfolio motion</li>
-            <li>Formalize how I develop the SEs around me through pairing, shadowing, and feedback, and lift as I climb</li>
+            <li>Have a program or asset in steady use by other SEs, not only me, with a simple measure of adoption</li>
+            <li>Bring leadership a recommendation on one process or coverage gap, backed by what I saw in the first 60 days</li>
+            <li>Become the named resource for at least one product area or segment on the team</li>
+            <li>Formalize how I develop the SEs around me through pairing, shadowing, and feedback, and define the metrics I will hold myself to</li>
           </ul>
         </div>
       </div>
@@ -308,21 +289,6 @@
         });
       }, { threshold: 0.4 });
       nums.forEach(el => io.observe(el));
-    })();
-  </script>
-  <script>
-    // 3D tilt-toward-cursor on the fit pillars (matches What's Next cards)
-    (function () {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      document.querySelectorAll('.fit-pillar').forEach(card => {
-        card.addEventListener('pointermove', e => {
-          const r = card.getBoundingClientRect();
-          const px = (e.clientX - r.left) / r.width - 0.5;
-          const py = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = 'rotateX(' + (-py * 8).toFixed(2) + 'deg) rotateY(' + (px * 10).toFixed(2) + 'deg) translateY(-4px)';
-        });
-        card.addEventListener('pointerleave', () => { card.style.transform = ''; });
-      });
     })();
   </script>
 </body>
